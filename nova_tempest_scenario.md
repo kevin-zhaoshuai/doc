@@ -6,7 +6,8 @@ do some essential tests for Nova.
 Where to see the log info(LOG.debug in tempest code)?
 In tempest.log, it will output the log information with REST and json information.
 #Test_minimum_basic
-Use image cirros-d160722-aarch64-disk.img, from: http://download.cirros-cloud.net/daily/20160722
+Use image cirros-d160722-aarch64-disk.img, from: 
+http://download.cirros-cloud.net/daily/20160722
 ##Configure file
 Modify the tempest/etc/tempest.conf:
 ```shell
@@ -52,5 +53,7 @@ The cirros image for AArch64,/proc/partitions:
    1       15      65536 ram15
 ```
 But in x86_64 cirros:
+```shell
 253        0   20971520 vda
 11        0        422 sr0
+```
