@@ -57,3 +57,8 @@ But in x86_64 cirros:
 253        0   20971520 vda
 11        0        422 sr0
 ```
+#Other passed scenario test:
+test_server_basic_ops
+test_server_advanced_ops
+test_aggregates_basic_ops
+test_encrypted_cinder_volumes
