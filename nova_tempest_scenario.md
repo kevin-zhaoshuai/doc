@@ -21,7 +21,7 @@ img_file = cirros-d160722-aarch64-disk.img
 aki_img_file =
 ari_img_file =
 ami_img_file =
-img_dir = 
+img_dir = /opt/stack
 img_properties = hw_firmware_type:uefi, short_id:ubuntu16.04
 ```
 ##Run testr
