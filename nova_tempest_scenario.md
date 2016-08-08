@@ -8,6 +8,7 @@ In tempest.log, it will output the log information with REST and json informatio
 #Test_minimum_basic
 Use image cirros-d160722-aarch64-disk.img, from: 
 http://download.cirros-cloud.net/daily/20160722
+If you want to upload it to glance, use command below.This is not essential
 ```shell
 glance image-create --name cirros --disk-format qcow2 --container-format bare --visibility public --file cirros-d160722-aarch64-disk.img --progress
 glance image-update --property hw_firmware_type=uefi --property short_id=ubuntu16.04 e3905bd8-a127-4cb3-9661-58d3bf65b7db
