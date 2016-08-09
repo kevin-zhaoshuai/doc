@@ -34,8 +34,8 @@ testr run tempest.scenario.test_minimum_basic
 ##issue
 1.Boot image got problem, console log output info as below:
 Synchronizaiton failed 0x000000021324
-That is due to the flavor, default is flavor_ref=42 --> m1.nano.But tiny will not suitable for 
-AArch64 cirros. Should modify it to 2(m1.small)
+That is due to the flavor, default is flavor_ref=42 --> m1.nano. But nano will not suitable for 
+AArch64 cirros. Should modify it to 1(m1.tiny)
 2.Check partitions error:
 check_partitions will call "cat /proc/partitions", and calculate times of the device name occurrence.
 The cirros image for AArch64,/proc/partitions:
