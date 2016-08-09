@@ -75,5 +75,7 @@ But in x86_64 cirros:
 #test_volume_boot_pattern
 Make sure that the flavor_ref = 1 in tempest.conf
 If the flavor disk > 1G, will cause error:
+```shell
 Details: {u'message': u'Volume is smaller than the minimum size specified in image metadata. Volume size is 1073741824 bytes, minimum size is 5368709120 bytes.', u'code': 400}
+```
 So make sure that the disk image size < 1G will OK
