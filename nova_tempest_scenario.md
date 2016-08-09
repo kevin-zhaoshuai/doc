@@ -16,7 +16,7 @@ glance image-update --property hw_firmware_type=uefi --property short_id=ubuntu1
 ##Configure file
 Modify the tempest/etc/tempest.conf:
 ```shell
-flavor_ref = 2
+flavor_ref = 1
 [scenario]
 img_file = cirros-d160722-aarch64-disk.img
 aki_img_file =
@@ -70,4 +70,10 @@ But in x86_64 cirros:
 * test_security_groups_basic_ops
 * test_shelve_instance
 * test_stamp_pattern
-* 
+* test_volume_boot_pattern
+
+#test_volume_boot_pattern
+Make sure that the flavor_ref = 1 in tempest.conf
+If the flavor disk > 1G, will cause error:
+Details: {u'message': u'Volume is smaller than the minimum size specified in image metadata. Volume size is 1073741824 bytes, minimum size is 5368709120 bytes.', u'code': 400}
+So make sure that the disk image size < 1G will OK
