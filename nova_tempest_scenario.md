@@ -56,6 +56,18 @@ The cirros image for AArch64,/proc/partitions:
    1       13      65536 ram13
    1       14      65536 ram14
    1       15      65536 ram15
+ 253        0   41943040 vda
+ 253        1   41933807 vda1
+ 253       15       8192 vda15
+```
+After reboot:
+```shell 
+*** ram
+   1       15      65536 ram15
+ 253        0    1048576 vda
+ 253       16    1048576 vdb
+ 253       17    1039343 vdb1
+ 253       31       8192 vdb15
 ```
 But in x86_64 cirros:
 ```shell
